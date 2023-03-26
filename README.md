@@ -53,4 +53,5 @@ Server Requirements
  <li>https://magecomp.com/blog/laravel-authentication-with-breeze/</li>
  <li>https://www.itsolutionstuff.com/post/how-to-create-multilingual-website-in-laravelexample.html</li>
  <li>https://www.youtube.com/watch?v=9Rocw50kpSY</li>
+ <li>https://laravel.com/docs/10.x/localization#publishing-the-language-files</li>
 <ol> 
