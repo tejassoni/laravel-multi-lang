@@ -46,3 +46,11 @@ Server Requirements
  <li>Avoid MySQL sub queries if it does not require</li>
  <li>For more information, please read the document <a href="https://drive.google.com/drive/folders/1_nxEPw01QnVkVQfZ2WtXyeX7NcQ6ENdh" target='_blank'>Code Standard</a>
 </ol>
+
+
+# References
+<ol>
+ <li>https://magecomp.com/blog/laravel-authentication-with-breeze/</li>
+ <li>https://www.itsolutionstuff.com/post/how-to-create-multilingual-website-in-laravelexample.html</li>
+ <li>https://www.youtube.com/watch?v=9Rocw50kpSY</li>
+<ol> 
