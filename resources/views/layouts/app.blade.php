@@ -14,6 +14,10 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <!-- Styles -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/datatables.min.css') }}" rel="stylesheet">
+        
         {{-- KEY : MULTILANG Starts --}}
         @stack('header-styles')
         {{-- KEY : MULTILANG Ends --}}
@@ -39,6 +43,8 @@
 
         {{-- KEY : MULTILANG Starts --}}
         <script type='text/javascript' src="{{ asset('js/jquery-3.6.4.min.js') }}"></script>
+        <script type='text/javascript' src="{{ asset('js/datatables.min.js') }}"></script>        
+        <script type='text/javascript' src="{{ asset('js/bootstrap.min.js') }}"></script>
         @stack('footer-scripts')
         {{-- KEY : MULTILANG Ends --}}
     </body>

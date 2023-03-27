@@ -20,17 +20,23 @@
 
             {{-- KEY : MULTILANG Starts --}}
             <div class="row">
-                <div class="col-md-2 col-md-offset-6 text-right">
+                <div class="col-md-4 col-md-offset-6 text-right">
                     <strong>Select Language: </strong>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <select class="form-control changeLang">
-                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                        <option value="hi" {{ session()->get('locale') == 'hi' ? 'selected' : '' }}>Hindi</option>
+                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English </option>
+                        <option value="hi" {{ session()->get('locale') == 'hi' ? 'selected' : '' }}>Hindi </option>
                     </select>
                 </div>
             </div>
             {{-- KEY : MULTILANG Ends --}}
+
+            {{-- CRUD Module Starts--}}
+            <div class="row">
+                <a href="{{ route('category.index') }}" class="btn btn-sm btn-light">{{ __('messages.category') }}</a>
+            </div>
+            {{-- CRUD Module Ends --}}
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
