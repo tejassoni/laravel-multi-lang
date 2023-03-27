@@ -13,6 +13,10 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        {{-- KEY : MULTILANG Starts --}}
+        @stack('header-styles')
+        {{-- KEY : MULTILANG Ends --}}
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -32,5 +36,10 @@
                 {{ $slot }}
             </main>
         </div>
+
+        {{-- KEY : MULTILANG Starts --}}
+        <script type='text/javascript' src="{{ asset('js/jquery-3.6.4.min.js') }}"></script>
+        @stack('footer-scripts')
+        {{-- KEY : MULTILANG Ends --}}
     </body>
 </html>

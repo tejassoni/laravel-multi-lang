@@ -55,3 +55,9 @@ Server Requirements
  <li>https://www.youtube.com/watch?v=9Rocw50kpSY</li>
  <li>https://laravel.com/docs/10.x/localization#publishing-the-language-files</li>
 <ol> 
+
+
+# Search Key
+<ol>
+  <li>KEY : MULTILANG</li>
+</ol>
