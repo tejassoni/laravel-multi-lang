@@ -30,12 +30,18 @@ class SubCategory extends Model
      * @var array
      */
     protected $guarded = ['created_at','updated_at'];
-
+    
+    /**
+     * Sub category to Parent category relationship with hasOne
+     */
     public function getParentCatHasOne()
     {
         return $this->hasOne(Category::class, 'id', 'parent_category_id');
     }
 
+    /**
+     * Sub category to User relationship with hasOne
+     */
     public function getCatUserHasOne()
     {
         return $this->hasOne(User::class, 'id', 'user_id');

@@ -56,7 +56,7 @@
                             </span></label>
                         <select class="form-select" name="select_parent_cat" id="select_parent_cat">
                             <option selected readonly disabled>{{ __('messages.select-parent-category')."--" }}</option>
-                            @foreach ($parent_category as $parent_cat)
+                            @foreach ($parent_category ?? [] as $parent_cat)
                             <option value="{{ $parent_cat->id }}" {{ old('select_parent_cat') == $parent_cat->id ? "selected" : "" }}>{{ $parent_cat->name }}</option>
                             @endforeach
                         </select>

@@ -36,6 +36,7 @@ Route::middleware('auth')->group(function () {
     // Category resource
     Route::resource('/category', CategoryController::class);
     Route::resource('/subcategory', SubCategoryController::class);
+    Route::post('/subcategory/statusupdate', [SubCategoryController::class,'updateStatus']);
 });
 
 require __DIR__.'/auth.php';

@@ -50,6 +50,22 @@
                             </span>
                         @enderror
                     </div>
+                    <div class="mb-4">
+                        <label for="category_name"
+                            class="block mb-2 text-sm font-bold text-gray-700">{{ __('messages.select-parent-category') }}<span
+                                class="text-red-500 text-danger"> *
+                            </span></label>
+                        <select class="form-select" name="select_parent_cat" id="select_parent_cat">
+                            <option selected readonly disabled>{{ __('messages.select-parent-category')."--" }}</option>
+                            @foreach ($parent_category ?? [] as $parent_cat)
+                            <option value="{{ $parent_cat->id }}" {{ $subcategory->parent_category_id == $parent_cat->id ? "selected" : "" }} >{{ $parent_cat->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('select_parent_cat')
+                            <span class="text-red-500 text-danger">{{ $message }}
+                            </span>
+                        @enderror
+                    </div>
                     <div>
                         <button type="submit"
                             class="inline-flex items-center px-4 py-2 my-3 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-md hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25">

@@ -29,6 +29,7 @@
                                 <th>{{ __('messages.description') }}</th>
                                 <th>{{ __('messages.parent-category') }}</th>
                                 <th>{{ __('messages.created-by') }}</th>
+                                <th>{{ __('messages.status') }}</th>
                                 <th>{{ __('messages.action') }}</th>
                             </tr>
                         </thead>
@@ -39,6 +40,11 @@
                                     <td>{{ $category->description }}</td>
                                     <td>{{ $category->getParentCatHasOne->name ?? 'None' }}</td>
                                     <td>{{ $category->getCatUserHasOne->name ?? 'None' }}</td>
+                                    <td><select class="form-select" name="select_status" id="select_status" data-id="{{ $category->id }}">
+                                    <option selected readonly disabled>{{ __('messages.status') }}</option>
+                                    <option value="1" {{ $category->status == "1" ? "selected" : "" }}>{{ __('messages.active') }}</option>
+                                    <option value="0" {{ $category->status == "0" ? "selected" : "" }}>{{ __('messages.in-active') }}</option>
+                                    </select></td>
                                     <td>
                                         <form action="{{ route('subcategory.destroy', $category->id) }}" method="POST">
                                             <a class="btn btn-info btn-sm"
@@ -63,6 +69,22 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#sub-category-tbl').DataTable();
+                // Status update
+                $('#select_status').on('change', function(){
+                     $.ajax({
+                        type: 'POST',
+                        url: "{{ url('subcategory/statusupdate') }}",
+                        data: {"_token": "{{ csrf_token() }}",status:$(this).val(),id:$(this).attr('data-id')},
+                        dataType: 'json', 
+                        success: function(data_resp, textStatus, jqXHR) { // On ajax success operation
+                            if(data_resp.status){
+                                alert(data_resp.message);
+                            }
+                        },error: function (jqXHR, textStatus, errorThrown) { // On ajax error operation 
+                           alert(textStatus, errorThrown);        
+                        }
+                        });
+                });
             });
         </script>
     @endpush

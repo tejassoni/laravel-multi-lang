@@ -20,7 +20,7 @@ return [
    'enter_category_description' => 'श्रेणी विवरण दर्ज करें',
    'status' => 'दर्जा',
    'active' => 'सक्रिय',
-   'in-active' => 'सक्रिय',
+   'in-active' => 'निष्क्रिय',
    'sub-category' => 'उप श्रेणी',
    'sub-category-name' => 'उप श्रेणी का नाम',
    'sub-category Description' => 'उप श्रेणी विवरण',
