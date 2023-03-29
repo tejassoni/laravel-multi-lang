@@ -41,4 +41,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * The subcategory that belong to the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function subcategory()
+    {
+        return $this->belongsTo(SubCategory::class,  'id','user_id'); 
+        //First Param = users table primary key : Users->id
+        // Second Param = sub_Categories table's foreign key of user table primary key  e.g, sub_categories->user_id  
+    }
+    
+
+   
 }

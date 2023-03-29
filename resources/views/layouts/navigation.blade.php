@@ -25,16 +25,24 @@
                 </div>
                 <div class="col-md-6">
                     <select class="form-control changeLang">
-                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English </option>
+                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English
+                        </option>
                         <option value="hi" {{ session()->get('locale') == 'hi' ? 'selected' : '' }}>Hindi </option>
                     </select>
                 </div>
             </div>
             {{-- KEY : MULTILANG Ends --}}
 
-            {{-- CRUD Module Starts--}}
+            {{-- CRUD Module Starts --}}
             <div class="row">
-                <a href="{{ route('category.index') }}" class="btn btn-sm btn-light">{{ __('messages.category') }}</a>
+                <div class="col-sm">
+                    <a href="{{ route('category.index') }}"
+                        class="btn btn-sm btn-light">{{ __('messages.category') }}</a>
+                </div>
+                <div class="col-sm">
+                    <a href="{{ route('subcategory.index') }}"
+                        class="btn btn-sm btn-light">{{ __('messages.sub-category') }}</a>
+                </div>
             </div>
             {{-- CRUD Module Ends --}}
 
@@ -129,14 +137,14 @@
 
 {{-- KEY : MULTILANG Starts --}}
 @push('footer-scripts')
-<script type="text/javascript">
-    $(document).ready(function() {
-        // console.log('document ready test..!');
-        var url = "{{ route('changeLang') }}";
-        $(".changeLang").change(function() {
-            window.location.href = url + "?lang=" + $(this).val();
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // console.log('document ready test..!');
+            var url = "{{ route('changeLang') }}";
+            $(".changeLang").change(function() {
+                window.location.href = url + "?lang=" + $(this).val();
+            });
         });
-    });
-</script>
+    </script>
 @endpush
 {{-- KEY : MULTILANG Ends --}}

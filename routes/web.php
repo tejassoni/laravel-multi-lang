@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LangController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::middleware('auth')->group(function () {
 
     // Category resource
     Route::resource('/category', CategoryController::class);
+    Route::resource('/subcategory', SubCategoryController::class);
 });
 
 require __DIR__.'/auth.php';

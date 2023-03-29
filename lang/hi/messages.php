@@ -21,12 +21,14 @@ return [
    'status' => 'दर्जा',
    'active' => 'सक्रिय',
    'in-active' => 'सक्रिय',
+   'sub-category' => 'उप श्रेणी',
    'sub-category-name' => 'उप श्रेणी का नाम',
    'sub-category Description' => 'उप श्रेणी विवरण',
    'parent-category' => 'अभिभावक श्रेणी',
    'select-parent-category' => 'जनक श्रेणी का चयन करें',
    'description' => 'विवरण',
    'name' => 'नाम',
+   'created-by' => 'द्वारा बनाई गई',
 
    // buttons 
    'new' => 'नया',
