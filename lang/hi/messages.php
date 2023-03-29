@@ -15,7 +15,9 @@ return [
    'logout' => 'लॉग आउट',
    'category' => 'श्रेणी',
    'category_name' => 'श्रेणी नाम',
+   'enter_category_name' => 'श्रेणी का नाम दर्ज करें',
    'category_description' => 'वर्ग विवरण',
+   'enter_category_description' => 'श्रेणी विवरण दर्ज करें',
    'status' => 'दर्जा',
    'active' => 'सक्रिय',
    'in-active' => 'सक्रिय',
@@ -23,11 +25,19 @@ return [
    'sub-category Description' => 'उप श्रेणी विवरण',
    'parent-category' => 'अभिभावक श्रेणी',
    'select-parent-category' => 'जनक श्रेणी का चयन करें',
+   'description' => 'विवरण',
+   'name' => 'नाम',
+
+   // buttons 
    'new' => 'नया',
    'delete' => 'मिटाना',
    'action' => 'कार्य',
-   'view' => 'देखना',
-   'name' => 'नाम',
-   'description' => 'विवरण',
+   'view' => 'देखना',  
    'back' => 'पीछे',
+   'create' => 'बनाएं',
+   'update' => 'अद्यतन',
+   'list' => 'सूची',
+   'save' => 'बचाना',
+   'show' => 'दिखाना',
+   'edit' => 'संपादन करना'
 ];
